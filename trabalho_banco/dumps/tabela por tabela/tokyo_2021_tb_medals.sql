@@ -32,7 +32,7 @@ CREATE TABLE `tb_medals` (
   `silver` smallint DEFAULT NULL,
   `bronze` smallint DEFAULT NULL,
   `total` smallint DEFAULT NULL,
-  `ranking_by_total` tinyint DEFAULT NULL,
+  `rank_by_total` tinyint DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-10 14:15:49
+-- Dump completed on 2023-06-10 14:59:48

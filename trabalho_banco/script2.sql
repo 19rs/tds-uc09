@@ -6,7 +6,7 @@ USE TOKYO_2021;
 
 CREATE TABLE TB_ATLETAS(
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- 11085
-nome VARCHAR(100), -- 35
+nome VARCHAR(80), -- 35
 pais VARCHAR(60), -- 34
 disciplina VARCHAR(60) -- 21
 );
@@ -72,12 +72,15 @@ SELECT COUNT(*) FROM TB_TEAMS;
 SELECT MAX(LENGTH(nome)), MAX(LENGTH(disciplina)), MAX(LENGTH(noc)), MAX(LENGTH(evento))
 FROM TB_TEAMS;
 
+SELECT * FROM TB_ATLETAS WHERE ID = 154;
 
 
 
+DROP TABLE TB_ATLETAS;
 
-
-
+ALTER TABLE TB_ATLETAS RENAME TO TB_ATHLETES;
+ALTER TABLE TB_TECNICOS RENAME TO TB_COACHES;
+ALTER TABLE TB_TECNICOS MODIFY nome VARCHAR(80);
 
 SELECT id, nome, 
 CASE WHEN pais = 'Brazil' THEN 'BRASIL'
@@ -105,7 +108,11 @@ SELECT COUNT(*) FROM TB_ATLETAS WHERE pais LIKE 'BRAZIL';
 
 
 
-
+select * from tb_coaches;
+select * from tb_athletes limit 100;
+select * from tb_entries_gender;
+select * from tb_medals;
+select * from tb_teams;
 
 
 
